@@ -3,14 +3,11 @@ def calculate_income(rate, money, month):
         return 0
 
     for i in range(1, month + 1):
-        money = round(money + money * rate / 100 / 12, 2)
+        money = round(money + money * (rate / 100 / 12), 2)
     return money
 
 
 def main():
-    rate = 10
-    money = 100000
-    period = 12
 
     result = calculate_income(rate, money, period)
     print("Параметры счета:\n", "Сумма: ", money, "\n", "Ставка: ", rate, "\n", "Период: ", period, "\n",
